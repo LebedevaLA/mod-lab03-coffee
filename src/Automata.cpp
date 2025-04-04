@@ -1,4 +1,8 @@
 // Copyright 2022 UNN-IASR
+#include <iostream>
+#include <utility>
+#include <vector>
+#include <string>
 #include "Automata.h"
 
 Automata::Automata() : cash(0.0), state(STATES::OFF),

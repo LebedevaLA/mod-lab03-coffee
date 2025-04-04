@@ -1,6 +1,7 @@
 // Copyright 2022 GHA Test Team
 
 #include <gtest/gtest.h>
+#include <vector>
 #include "Automata.h"
 
 TEST(Test, test1) {
