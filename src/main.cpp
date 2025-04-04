@@ -1,6 +1,7 @@
+// Copyright 2022 UNN-IASR
 #include "Automata.h"
 
-int main(){
+int main() {
     Automata autom = Automata();
     autom.on();
     autom.coin(100);

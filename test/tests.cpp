@@ -42,7 +42,8 @@ TEST(Test, test6) {
     autom.coin(200);
     autom.choise(7);
     autom.check();
-    vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT, STATES::CHECK, STATES::COOK, STATES::WAIT};
+    std::vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT,
+         STATES::CHECK, STATES::COOK, STATES::WAIT};
     EXPECT_EQ(autom.getHistory(), res);
 }
 
@@ -52,7 +53,8 @@ TEST(Test, test7) {
     autom.coin(5);
     autom.choise(7);
     autom.check();
-    vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT, STATES::CHECK, STATES::WAIT};
+    std::vector<STATES> res = {STATES::OFF, STATES::WAIT,
+        STATES::ACCEPT, STATES::CHECK, STATES::WAIT};
     EXPECT_EQ(autom.getHistory(), res);
 }
 TEST(Test, test8) {
@@ -71,7 +73,8 @@ TEST(Test, test9) {
     autom.coin(100);
     autom.choise(0);
     autom.check();
-    vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT, STATES::ACCEPT, STATES::CHECK, STATES::COOK, STATES::WAIT};
+    std::vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT,
+        STATES::ACCEPT, STATES::CHECK, STATES::COOK, STATES::WAIT};
     EXPECT_EQ(autom.getHistory(), res);
 }
 TEST(Test, test10) {
@@ -93,7 +96,9 @@ TEST(Test, test11) {
     autom.coin(100);
     autom.choise(0);
     autom.check();
-    vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT,STATES::CHECK,STATES::WAIT, STATES::ACCEPT, STATES::CHECK, STATES::COOK, STATES::WAIT};
+    std::vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT,
+        STATES::CHECK, STATES::WAIT, STATES::ACCEPT,
+        STATES::CHECK, STATES::COOK, STATES::WAIT};
     EXPECT_EQ(autom.getHistory(), res);
 }
 
@@ -105,7 +110,8 @@ TEST(Test, test12) {
     autom.cansel();
     autom.choise(2);
     autom.check();
-    vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT, STATES::CHECK, STATES::COOK, STATES::WAIT};
+    std::vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT,
+        STATES::CHECK, STATES::COOK, STATES::WAIT};
     EXPECT_EQ(autom.getHistory(), res);
 }
 TEST(Test, test13) {
@@ -116,7 +122,9 @@ TEST(Test, test13) {
     autom.check();
     autom.choise(2);
     autom.check();
-    vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT, STATES::CHECK, STATES::ACCEPT, STATES::CHECK, STATES::COOK, STATES::WAIT};
+    std::vector<STATES> res = {STATES::OFF, STATES::WAIT, STATES::ACCEPT,
+        STATES::CHECK, STATES::ACCEPT, STATES::CHECK,
+        STATES::COOK, STATES::WAIT};
     EXPECT_EQ(autom.getHistory(), res);
 }
 TEST(Test, test14) {

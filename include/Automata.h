@@ -1,9 +1,10 @@
+// Copyright 2022 UNN-IASR
 #ifndef INCLUDE_AUTOMATA_H_
 #define INCLUDE_AUTOMATA_H_
 #include <iostream>
+#include <utility>
 #include <vector>
 #include <string>
-using namespace std;
 
 enum class STATES {
     OFF,
@@ -14,14 +15,14 @@ enum class STATES {
 };
 
 class Automata{
-    public:
+ public:
         Automata();
         void on();
         void off();
         void coin(double amount);
         void cansel();
-        pair<vector<string>, vector<double>> getMenu();
-        vector <STATES> getHistory();
+        std::pair<std::vector<std::string>, std::vector<double>> getMenu();
+        std::vector <STATES> getHistory();
         STATES getState();
         double get_cash();
         int get_id_drink();
@@ -29,12 +30,12 @@ class Automata{
         void check();
         void cook();
         void finish();
-    private:
+ private:
         double cash;
-        vector<std::string> menu;
-        vector<double> prices;
+        std::vector<std::string> menu;
+        std::vector<double> prices;
         int drink_id;
         STATES state;
-        vector<STATES> history;
+        std::vector<STATES> history;
 };
-#endif
+#endif  // INCLUDE_AUTOMATA_H_
